@@ -14,6 +14,7 @@ public class estudiantes {
     String carnet;
     String carrera;
     int semestre;
+    String semestre2;
     
     public estudiantes(){
         System.out.println("Estudiante agregado");
