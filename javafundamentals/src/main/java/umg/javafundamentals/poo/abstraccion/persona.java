@@ -9,5 +9,8 @@ package umg.javafundamentals.poo.abstraccion;
  * @author dygrz
  */
 public class persona {
-    
+    carro carro= new carro();
+    void manejar (){
+    carro.acelerar();
+    }
 }

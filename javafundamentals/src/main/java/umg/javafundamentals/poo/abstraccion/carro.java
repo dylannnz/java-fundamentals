@@ -14,8 +14,8 @@ public class carro {
     private String motor;
     private int nlugares;
     
-    void acelerar(){
-    
+    void acelerar(){       
+        
     }
     
     private void incrementarrevoluciones(){
