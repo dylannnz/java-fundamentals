@@ -20,7 +20,7 @@ public class prueba {
         e1.nombre = "Dylan";
         e1.apellido = "Zuleta";
         e1.carrera = "Sistemas";
-        e1.carnet = "3190266134";
+        e1.carnet = "266134";
         e1.semestre = 2;
         
         ArrayList<estudiantes> lista = new ArrayList();
