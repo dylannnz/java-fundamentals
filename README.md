@@ -24,6 +24,8 @@ java-fundamentals/
         ├── arreglos/        ejemplos, calculoprecios (GUI), palindromos (GUI)
         ├── archivos/        manejoarchivos (GUI)
         ├── poo/             estudiantes, Galleta, prueba
+        │   ├── abstraccion/ carro, persona
+        │   └── herencia/    vehiculo, carro
         └── modularidad/     Menu (GUI), Registro (GUI), Consultas (GUI)
 ```
 
@@ -43,6 +45,7 @@ java-fundamentals/
 > ⚠️ Cada clase tiene su propio `main`, así que se ejecutan **de una en una** con *Run File*.
 > `Run Project` (F6) solo ejecuta `Javafundamentals`, que imprime `Hello World!`.
 > `productos.csv` se lee y escribe de forma relativa, por eso debe estar en la carpeta `javafundamentals` (la raíz del proyecto Maven).
+> Las clases de `poo/abstraccion` y `poo/herencia` son ejemplos de modelado de clases y no tienen un `main` ejecutable.
 
 **Desde terminal** (opcional), dentro de la carpeta `javafundamentals`:
 
@@ -119,6 +122,22 @@ Cambiar la clase final por la que se quiera ejecutar (con su paquete completo).
 
 Se practica: crear clases, instanciar con `new`, asignar atributos con el operador punto y guardar objetos en una lista.
 
+#### 🧩 `poo/abstraccion`: ocultar el detalle, mostrar solo lo necesario
+
+| Clase | Contenido | Idea que ilustra |
+|---|---|---|
+| `carro` | Atributos `private`: `npuertas`, `nllantas`, `motor`, `nlugares`. Método `acelerar()` (visible dentro del paquete) y método `private incrementarrevoluciones()` (interno) | El detalle de cómo funciona el carro queda **oculto**; solo se expone `acelerar()` |
+| `persona` | Tiene un `carro` y un método `manejar()` que llama a `carro.acelerar()` | La persona **usa** el carro sin saber cómo funciona por dentro |
+
+#### 🧬 `poo/herencia`: reutilizar atributos de una clase padre
+
+| Clase | Contenido | Idea que ilustra |
+|---|---|---|
+| `vehiculo` | Clase **`abstract`** con atributos públicos `npuertas` y `nllantas` | Clase padre con lo que comparten todos los vehículos; no se puede instanciar directamente |
+| `carro` | `extends vehiculo`. Crea `vehiculo carro1 = new carro();` y le asigna `carro1.npuertas = 4` | El hijo **hereda** los atributos del padre y se puede tratar como un `vehiculo` |
+
+> Ambos paquetes tienen una clase llamada `carro`; no chocan porque cada una vive en su propio paquete (`umg.javafundamentals.poo.abstraccion` y `umg.javafundamentals.poo.herencia`).
+
 ### 7️⃣ `modularidad`
 
 Aplicación de **tres ventanas** que se comunican a través de un archivo CSV. Se ejecuta desde `Menu`.
@@ -161,6 +180,8 @@ C,3.0
 | Arreglos y `split(",")` | `arreglos`, `modularidad` |
 | Lectura y escritura de archivos | `archivos`, `modularidad` |
 | Clases, objetos y `ArrayList` | `poo` |
+| Abstracción y encapsulamiento (`private`) | `poo/abstraccion` |
+| Herencia (`extends`) y clases `abstract` | `poo/herencia` |
 | Interfaces gráficas con Swing y eventos de botón | `calculoprecios`, `palindromos`, `manejoarchivos`, `modularidad` |
 | Programación modular (varias ventanas) | `modularidad` |
 
