@@ -9,5 +9,9 @@ package umg.javafundamentals.poo.herencia;
  * @author dygrz
  */
 public class carro extends vehiculo{
+    
+    public static void main(){
     vehiculo carro1 = new carro();
+    carro1.npuertas = 4;
+    }
 }
