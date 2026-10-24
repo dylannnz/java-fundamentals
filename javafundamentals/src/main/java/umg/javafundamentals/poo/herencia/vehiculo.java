@@ -9,5 +9,6 @@ package umg.javafundamentals.poo.herencia;
  * @author dygrz
  */
 public abstract class vehiculo {
-    
+    public int npuertas;
+    public int nllantas;
 }
